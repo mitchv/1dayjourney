@@ -4,7 +4,7 @@
 	<style>
 		BODY {margin:0; padding:0; font-family:verdana;}
 		.flexy {height:96vh;width:94vw;display:inline-flex; flex-flow:row wrap; justify-content:space-around;align-items:center;align-content:center;}
-		.subflex {margin:1vmin;height:10vmin;width:20vmax;background-color:#ddd;}
+		.subflex {flex-basis:200px;margin:1vmin;height:10vmin;width:20vmax;background-color:#ddd;}
 	</style>
   </HEAD>
   <BODY>
@@ -14,8 +14,8 @@
 	<div class="subflex">Test</div>
 	<div class="subflex">Ting</div>
 	<div class="subflex">Test</div>
-	<div class="subflex">Ting</div>
-	<div class="subflex">Test</div>
+	<div class="subflex" style="flex-grow:1;">Ting</div>
+	<div class="subflex" style="flex-grow:1;">Test</div>
 	<div class="subflex">Ting</div>
 	<div class="subflex">Test</div>
 	<div class="subflex">Ting</div>
