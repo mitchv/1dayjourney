@@ -1,4 +1,7 @@
+todo:
 
+dorian site, 
+jen video 
 
 
 CREDIT SCORE IMPACT CALCULATOR
