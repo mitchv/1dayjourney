@@ -1,7 +1,5 @@
 todo:
 
-jen video 
-
 
 CREDIT SCORE IMPACT CALCULATOR
 
@@ -18,20 +16,26 @@ Visa 5257  - 12.15% APR - $500 limit - 6 age
  * - All our useful JS goes here, awesome!
  */
 
-console.log("JavaScript is amazing!");
-
-
-	function CardConstruct(lastdigs, assoc, apr, limit, age) {
-		this.lastDigs = lastdigs;
-		this.assoc = assoc;
-		this.apr = apr;
-		this.limit = limit;
-		this.age = age;
-	}
-
-	let myPurpleVisa = new CardConstruct(5257, "Visa", 12.15, 500, 2190);
-
+function CardConstruct(lastdigs, issuer, apr, limit, age, balance) {
+  this.lastdigs = lastdigs;
+  this.issuer = issuer;
+  this.apr = apr;
+  this.limit = limit;
+  this.age = age;
+  this.balance = balance;
+  this.name = issuer + lastdigs;
+  this.fees =  apr * balance;
+  this.percentage = balance / limit;
 }
+
+function addCard() {
+let myPurpleVisa = new CardConstruct(5257, "V", '.1215', 500, 2190, 65);
+document.getElementByID('cardname').innerHTML = myPurpleVisa.name;
+};
+
+
+
+
 
 
 
