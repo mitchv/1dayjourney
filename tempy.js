@@ -10,6 +10,13 @@ Visa 5257  - 12.15% APR - $500 limit - 6 age
 
 
 
+<div id="cardname">
+Foo
+</div>
+
+<form>
+<a href="#" onclick="addCard()">New car</a>
+</form>
 
 /**
  * index.js
