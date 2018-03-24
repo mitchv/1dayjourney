@@ -1,6 +1,5 @@
 todo:
 
-dorian site, 
 jen video 
 
 
