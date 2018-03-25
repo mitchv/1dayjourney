@@ -1,4 +1,6 @@
 todo:
+add lazy loader to figure drawings gallery
+
 
 
 CREDIT SCORE IMPACT CALCULATOR
