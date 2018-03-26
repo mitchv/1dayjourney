@@ -1,5 +1,6 @@
 todo:
 add lazy loader to figure drawings gallery
+temp solution - commented out all but 40
 
 
 
