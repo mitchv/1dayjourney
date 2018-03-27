@@ -1,7 +1,19 @@
 todo:
 add lazy loader to figure drawings gallery
+add preloaders
 temp solution - commented out all but 40
 
+
+
+
+<figure>
+			<img class="case-study__img" src="http://veggart.com/body-paint-react/slick.png" alt="" />
+		</figure>
+	  <div class="case-study__overlay">
+	  	<h2 class="case-study__title">WordPress 2018</h2>
+	    <a class="case-study__link disabled" href="#">Coming Soon</a>
+	  </div>
+	</div>
 
 
 CREDIT SCORE IMPACT CALCULATOR
