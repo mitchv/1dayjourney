@@ -8,6 +8,7 @@
 
 	<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
 	<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/redux/3.5.2/redux.min.js"></script>
 	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 
 	<!-- external stylesheet <link rel="stylesheet" type="text/css" href="/styles/theme.css"> -->
@@ -34,6 +35,50 @@
 			font-size: 28px;
 			text-align: center;
 		}
+
+		button {
+			padding: 0.20em 0.4em;
+			line-height: 1;
+			vertical-align: middle;
+			border-radius: 3px;
+			color: #fefefe;
+			border: 3px solid;
+			background: #fefefe;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			transition: -webkit-transform 60ms ease-out;
+			transition: transform 60ms ease-out;
+			transition: transform 60ms ease-out, -webkit-transform 60ms ease-out;
+			cursor: pointer;
+		}
+
+		button:active {
+			-webkit-transform: translateY(2px);
+			transform: translateY(2px);
+			transition: -webkit-transform 100ms ease-out;
+			transition: transform 100ms ease-out;
+			transition: transform 100ms ease-out, -webkit-transform 100ms ease-out;
+		}
+
+		button:hover,
+		button:focus {
+			outline: none;
+		}
+
+		#increment,
+		#decrement {
+			width: 50px;
+		}
+
+		#increment {
+			color: #5cb85c;
+			border-color: #75c375;
+		}
+
+		#decrement {
+			color: #E67373;
+			border-color: #eb9191;
+		}
 	</style>
 
 
@@ -42,13 +87,15 @@
 <body>
 
 	<script type="text/babel">
-// let needValues = {AValue: 5};
+
 
 	class NeedCard extends React.Component {
 		constructor(props) {
     super(props);
-    this.state = {
-			AValue : 7
+	let self = this;
+    self.state = {
+			AValue : 7,
+			CValue : 6
 		};
 	}
 
@@ -80,9 +127,9 @@ decrease() {
 			return (
 				<div className="card A need0" style={cardStyle}> {this.props.name}
 				<form className={this.props.init} name={this.props.init}>
-					<button form={this.props.init} onClick={this.decrease.bind(this)} value="-">Rem</button>
+					<button form={this.props.init} value="-" id="decrement">Rem</button>
 					<span>{this.state.AValue}</span>
-					<button form={this.props.init} onClick={this.increase.bind(this)} value="+">Add</button>
+					<button form={this.props.init} value="+" id="increment">Add</button>
 					</form>
 					</div>
 		);
