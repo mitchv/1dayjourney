@@ -42,16 +42,24 @@
 <body>
 
 	<script type="text/babel">
+			let A = 5;
+			let x = A;
+			function increase(x) {
+				x++;
+			}
+			function decrease(x) {
+				x--;
+			}
 
 	class NeedCard extends React.Component {
 		render() {
 			var cardStyle = {backgroundColor: this.props.bgcolor,};
 			return (
 				<div className="card A need0" style={cardStyle}> {this.props.name}
-				<form>
-					<button type="submit" value="-">Rem</button>
-					<span>10</span>
-					<button type="submit" value="+">Add</button>
+				<form className={this.props.init} name={this.props.init}>
+					<button form={this.props.init} onClick="decrease()" value="-">Rem</button>
+					<span>{x}</span>
+					<button form={this.props.init} onClick="increase()" value="+">Add</button>
 					</form>
 					</div>
 		);
