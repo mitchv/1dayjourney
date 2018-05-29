@@ -15,12 +15,17 @@
 	<style>
 		.grid-container {
 			display: grid;
+			grid-template-columns: 25vw 25vw 25vw 25vw;
 		}
 
 		.card {
 			background-color: #ff0000;
-			height: 100px;
-			width: 100px;
+			padding: 10px;
+			margin: 10px;
+			color: #000;
+			font-family: Verdana;
+			font-size: 28px;
+			text-align: center;
 		}
 	</style>
 </head>
@@ -31,12 +36,17 @@
 
 	class NeedCard extends React.Component {
 		render() {
-			return <div class="card A need8"> {this.props.name} </div>
+			var cardStyle = {backgroundColor: this.props.bgcolor,};
+			return (
+				<div className="card A need0" style={cardStyle}> {this.props.name} </div>
+		);
 		}
  
 }
+
 			ReactDOM.render(
-				<NeedCard name="Autonomy" init="A" index="8" />
+				<div>
+				<NeedCard name="Autonomy" init="A" index="8" bgcolor="#00FF00" />
 				<NeedCard name="Collecting" init="C" index="13" />
 				<NeedCard name="Endorsement" init="E" index="1" />
 				<NeedCard name="Family" init="F" index="5" />
@@ -51,7 +61,8 @@
 				<NeedCard name="Order" init="O" index="9" />
 				<NeedCard name="Power" init="P" index="11" />
 				<NeedCard name="Recognition" init="R" index="15" />
-				<NeedCard name="Tranquility" init="T" index="16" />,
+				<NeedCard name="Tranquility" init="T" index="16" />
+				</div>,
 				document.querySelector("#grid-container")
 			);
 		</script>
