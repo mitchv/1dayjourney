@@ -29,15 +29,30 @@
 
 	<script type="text/babel">
 
-	class HelloWorld extends React.Component {
+	class NeedCard extends React.Component {
 		render() {
-			return <div class="card A need8">Autonomy</div>
+			return <div class="card A need8"> {this.props.name} </div>
 		}
  
 }
 			ReactDOM.render(
-				<HelloWorld/>,
-				document.querySelector(".grid-container")
+				<NeedCard name="Autonomy" init="A" index="8" />
+				<NeedCard name="Collecting" init="C" index="13" />
+				<NeedCard name="Endorsement" init="E" index="1" />
+				<NeedCard name="Family" init="F" index="5" />
+				<NeedCard name="Growth" init="G" index="7" />
+				<NeedCard name="Honor" init="H" index="6" />
+				<NeedCard name="Interaction" init="I" index="14" />
+				<NeedCard name="Justice" init="J" index="4" />
+				<NeedCard name="Knowledge" init="K" index="2" />
+				<NeedCard name="Love" init="L" index="12" />
+				<NeedCard name="Movement" init="M" index="10" />
+				<NeedCard name="Nourishment" init="N" index="3" />
+				<NeedCard name="Order" init="O" index="9" />
+				<NeedCard name="Power" init="P" index="11" />
+				<NeedCard name="Recognition" init="R" index="15" />
+				<NeedCard name="Tranquility" init="T" index="16" />,
+				document.querySelector("#grid-container")
 			);
 		</script>
 
@@ -46,23 +61,7 @@
 	<h2>Basic desires of humanity tracker with habit suggestions.</h2>
 	<h3>Version 0.1</h3>
 
-	<div class="grid-container">
-
-		<div class="card C need13">Collecting</div>
-		<div class="card E need1">Endorsement</div>
-		<div class="card F need5">Family</div>
-		<div class="card G need7">Growth</div>
-		<div class="card H need6">Honor</div>
-		<div class="card I need14">Interaction</div>
-		<div class="card J need4">Justice</div>
-		<div class="card K need2">Knowledge</div>
-		<div class="card L need12">Love</div>
-		<div class="card M need10">Movement</div>
-		<div class="card N need3">Nourishment</div>
-		<div class="card O need9">Order</div>
-		<div class="card P need11">Power</div>
-		<div class="card R need15">Recognition</div>
-		<div class="card T need16">Tranquility</div>
+	<div id="grid-container">
 	</div>
 
 
