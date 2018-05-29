@@ -42,29 +42,45 @@
 <body>
 
 	<script type="text/babel">
-			let A = 5;
-			let x = A;
-			function increase(x) {
-				x++;
-			}
-			function decrease(x) {
-				x--;
-			}
+
+let x = 5;
 
 	class NeedCard extends React.Component {
+		constructor(props) {
+    super(props);
+    this.state = {
+			AValue : 5
+		};
+		this.increase = this.increase.bind(this);
+    this.decrease = this.decrease.bind(this);
+	}
+
+	increase() {
+		++x;
+    this.setState({
+        AValue: x
+    });
+}
+
+decrease() {
+		--x;
+    this.setState({
+        AValue: x
+    });
+}
+
 		render() {
 			var cardStyle = {backgroundColor: this.props.bgcolor,};
 			return (
 				<div className="card A need0" style={cardStyle}> {this.props.name}
 				<form className={this.props.init} name={this.props.init}>
 					<button form={this.props.init} onClick="decrease()" value="-">Rem</button>
-					<span>{x}</span>
+					<span>{this.state.AValue}</span>
 					<button form={this.props.init} onClick="increase()" value="+">Add</button>
 					</form>
 					</div>
 		);
 		}
- 
 }
 
 			ReactDOM.render(
@@ -90,10 +106,12 @@
 			);
 		</script>
 
-	<div id="react-container"></div>
-
 	<h2>Basic desires of humanity tracker with habit suggestions.</h2>
 	<h3>Version 0.1</h3>
+
+
+	<div id="react-container"></div>
+
 
 	<!-- Scripts -->
 	<script src="scripts/index.js"></script>
