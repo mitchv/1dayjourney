@@ -10,16 +10,23 @@
 	<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 
-	<link rel="stylesheet" href="styles/index.processed.css">
+	<!-- external stylesheet <link rel="stylesheet" type="text/css" href="/styles/theme.css"> -->
 
 	<style>
 		.grid-container {
 			display: grid;
-			grid-template-columns: 25vw 25vw 25vw 25vw;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media (orientation: landscape) {
+			.grid-container {
+				grid-template-columns: 1fr 1fr 1fr 1fr;
+			}
 		}
 
 		.card {
-			background-color: #ff0000;
+			background-color: #ffcc00;
+			height: 25vh;
 			padding: 10px;
 			margin: 10px;
 			color: #000;
@@ -28,6 +35,8 @@
 			text-align: center;
 		}
 	</style>
+
+
 </head>
 
 <body>
@@ -38,14 +47,20 @@
 		render() {
 			var cardStyle = {backgroundColor: this.props.bgcolor,};
 			return (
-				<div className="card A need0" style={cardStyle}> {this.props.name} </div>
+				<div className="card A need0" style={cardStyle}> {this.props.name}
+				<form>
+					<button type="submit" value="-">Rem</button>
+					<span>10</span>
+					<button type="submit" value="+">Add</button>
+					</form>
+					</div>
 		);
 		}
  
 }
 
 			ReactDOM.render(
-				<div>
+				<div className="grid-container">
 				<NeedCard name="Autonomy" init="A" index="8" bgcolor="#00FF00" />
 				<NeedCard name="Collecting" init="C" index="13" />
 				<NeedCard name="Endorsement" init="E" index="1" />
@@ -63,7 +78,7 @@
 				<NeedCard name="Recognition" init="R" index="15" />
 				<NeedCard name="Tranquility" init="T" index="16" />
 				</div>,
-				document.querySelector("#grid-container")
+				document.querySelector("#react-container")
 			);
 		</script>
 
@@ -71,22 +86,6 @@
 
 	<h2>Basic desires of humanity tracker with habit suggestions.</h2>
 	<h3>Version 0.1</h3>
-
-	<div id="grid-container">
-	</div>
-
-
-	<form>
-		<input name="lastDigs" value="0000">Last 4 Digits</input>
-		<select name="assoc">
-			<option value="amex">American Express</option>
-			<option value="discover">Discover</option>
-			<option value="mc">MasterCard</option>
-			<option value="sb">Store Brand</option>
-			<option value="visa">Visa</option>
-		</select>
-		<button>Add Card</button>
-	</form>
 
 	<!-- Scripts -->
 	<script src="scripts/index.js"></script>
