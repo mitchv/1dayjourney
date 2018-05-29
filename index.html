@@ -42,41 +42,49 @@
 <body>
 
 	<script type="text/babel">
-
-let x = 5;
+// let needValues = {AValue: 5};
 
 	class NeedCard extends React.Component {
 		constructor(props) {
     super(props);
     this.state = {
-			AValue : 5
+			AValue : 7
 		};
-		this.increase = this.increase.bind(this);
-    this.decrease = this.decrease.bind(this);
 	}
 
 	increase() {
+		alert('increase!');
+
+		/*
 		++x;
     this.setState({
         AValue: x
-    });
+		});
+		
+	*/
 }
 
 decrease() {
+	alert('decrease!');
+
+	/*
 		--x;
     this.setState({
         AValue: x
-    });
-}
+		});
+		
+		*/
+} 
 
 		render() {
+			let x = this.state.AValue;
 			var cardStyle = {backgroundColor: this.props.bgcolor,};
 			return (
 				<div className="card A need0" style={cardStyle}> {this.props.name}
 				<form className={this.props.init} name={this.props.init}>
-					<button form={this.props.init} onClick="decrease()" value="-">Rem</button>
+					<button form={this.props.init} onClick={this.decrease.bind(this)} value="-">Rem</button>
 					<span>{this.state.AValue}</span>
-					<button form={this.props.init} onClick="increase()" value="+">Add</button>
+					<button form={this.props.init} onClick={this.increase.bind(this)} value="+">Add</button>
 					</form>
 					</div>
 		);
