@@ -53,9 +53,8 @@
 	}
 
 	increase() {
-		alert('increase!');
-
 		/*
+		alert('increase =' + a );
 		++x;
     this.setState({
         AValue: x
@@ -65,9 +64,8 @@
 }
 
 decrease() {
-	alert('decrease!');
-
 	/*
+	alert('decrease =' + a );
 		--x;
     this.setState({
         AValue: x
@@ -77,7 +75,7 @@ decrease() {
 } 
 
 		render() {
-			let x = this.state.AValue;
+			let a = this.state.AValue;
 			var cardStyle = {backgroundColor: this.props.bgcolor,};
 			return (
 				<div className="card A need0" style={cardStyle}> {this.props.name}
