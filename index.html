@@ -138,12 +138,21 @@ decrease() {
 
 			ReactDOM.render(
 				<div className="grid-container">
-				<NeedCard name="Autonomy" init="A" index="8" bgcolor="#00FF00" />
-				<NeedCard name="Collecting" init="C" index="13" />
-				<NeedCard name="Endorsement" init="E" index="1" />
-				<NeedCard name="Family" init="F" index="5" />
-				<NeedCard name="Growth" init="G" index="7" />
-				<NeedCard name="Honor" init="H" index="6" />
+				<NeedCard name="Autonomy" init="A" index="8" bgcolor="#00FF00"
+				definition="The need to be self-reliant."
+				synonyms="Independence, Self-Reliance, Alone Time" />
+				<NeedCard name="Collecting" init="C" index="13"
+				definition="The need to stockpile objects."
+				synonyms="Shopping, Gathering, Preparation" />
+				<NeedCard name="Endorsement" init="E" index="1" 
+				synonyms="Credibility, Popularity, Reliability"/>
+				<NeedCard name="Family" init="F" index="5" 
+				synonyms="Community, Affiliation, In-Group"/>
+				<NeedCard name="Growth" init="G" index="7"
+				synonyms="Improvement, Achievement, Completion" />
+				<NeedCard name="Honor" init="H" index="6"
+				definition="The need to live up to a moral code." 
+				synonyms="Integrity, Reputation, Ethics" />
 				<NeedCard name="Interaction" init="I" index="14" />
 				<NeedCard name="Justice" init="J" index="4" />
 				<NeedCard name="Knowledge" init="K" index="2" />
@@ -152,7 +161,8 @@ decrease() {
 				<NeedCard name="Nourishment" init="N" index="3" />
 				<NeedCard name="Order" init="O" index="9" />
 				<NeedCard name="Power" init="P" index="11" />
-				<NeedCard name="Recognition" init="R" index="15" />
+				<NeedCard name="Recognition" init="R" index="15"
+				synonyms="Inclusion, Credit, Acceptance" />
 				<NeedCard name="Tranquility" init="T" index="16" />
 				</div>,
 				document.querySelector("#react-container")
